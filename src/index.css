@@ -22,7 +22,11 @@ canvas {
 
 .meshSection{
     width: 100vw;
-    height: 100dvh;
+    height: 150dvh;
     background-color: rgb(255, 166, 166);
     user-select: none;
+}
+
+.meshSection div{
+    padding: 50px;
 }

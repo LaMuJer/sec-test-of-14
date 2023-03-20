@@ -1,14 +1,17 @@
 import { OrbitControls } from '@react-three/drei'
+import { useRef } from 'react'
 
 
-const MeshCanvas = ({props}) => {
+const MeshCanvas = ({scale}) => {
+
+    const el = useRef()
+
     return (
         <>
-            <OrbitControls enableZoom={false} />
-            <ambientLight />
-            <mesh {...props}  >
-                <boxGeometry args={[.5, .5, 1]} />
-                <meshStandardMaterial color="red" />
+            {/* <OrbitControls enableZoom={false} /> */}
+            <mesh scale={scale} ref= {el} >
+                <boxGeometry  />
+                <meshNormalMaterial />
             </mesh> 
         </>
     )

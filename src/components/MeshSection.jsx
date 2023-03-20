@@ -20,11 +20,14 @@ const MeshSection = () => {
                 <p>This layout is responsive. Making the window wider to see the ScrollScene detect the new DOM location.</p>
             </div>
             <UseCanvas >
-                <ScrollScene track={el}>
-                    {(props) => (
+                <ScrollScene
+                    track={el}
+                    debug = {true}
+                >
+                    {({scale }) => (
                         <>
                             <ambientLight />
-                            <MeshCanvas {...props} />
+                            <MeshCanvas scale={scale} />
                         </>
                     )}
                 </ScrollScene>
