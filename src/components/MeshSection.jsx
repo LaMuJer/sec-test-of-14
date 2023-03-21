@@ -6,12 +6,11 @@ import MeshCanvas from './MeshCanvas'
 const MeshSection = () => {
     const el = useRef()
 
-    console.log(el)
 
     return (
         <section className={`meshSection`} ref={el}>
             <div>
-                <h2>This is a Watch</h2>
+                <h2>This is a Cube 🎉</h2>
                 <p>
                     This GLB model is rendered in the default scene. Since the global camera is static, the angle towards the model changes as it
                     moves through the viewport.
@@ -22,12 +21,10 @@ const MeshSection = () => {
             <UseCanvas >
                 <ScrollScene
                     track={el}
-                    debug = {true}
                 >
-                    {({scale }) => (
+                    {(props) => (
                         <>
-                            <ambientLight />
-                            <MeshCanvas scale={scale} />
+                            <MeshCanvas {...props} />
                         </>
                     )}
                 </ScrollScene>

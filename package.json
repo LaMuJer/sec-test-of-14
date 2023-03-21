@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@14islands/r3f-scroll-rig": "^8.9.5",
@@ -18,7 +19,8 @@
     "postprocessing": "^6.29.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.148.0"
+    "three": "^0.148.0",
+    "vercel": "^28.17.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
